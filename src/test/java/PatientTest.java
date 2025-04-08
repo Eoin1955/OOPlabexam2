@@ -1,3 +1,4 @@
+import ie.atu.OOPexam2.Patient;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
@@ -10,22 +11,22 @@ import java.util.Scanner;
 import static org.junit.Assert.*;
 
 public class PatientTest {
-    Scanner scan;
     @BeforeEach
-    public void setUp(){
-        scan = new Scanner(System.in);
-
+    void setUp(){
+       String FirstName = new Patient().toString();
     }
-
-    @AfterEach
-    public void closeUp(){
-        scan.close();
-    }
-
     @Test
     void NameTest(){
-        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {});
-        assertEquals("Name must be greater than 3", exMessage.getMessage());
+
+        assertEquals("Name should be greater then 3", 3, FirstName);
+        assertTrue(FirstName>3);
+        //Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {});
+        //assertEquals("Name must be greater than 3", exMessage.getMessage());
+    }
+    @Test
+    void AgeTest(){
+
+        assertNotEquals();
     }
 
 }
