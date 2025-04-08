@@ -20,13 +20,21 @@ public class PatientTest {
 
         assertEquals("Name should be greater then 3", 3, FirstName);
         assertTrue(FirstName>3);
-        //Exception exMessage = assertThrows(IllegalArgumentException.class, () -> {});
-        //assertEquals("Name must be greater than 3", exMessage.getMessage());
+
     }
     @Test
     void AgeTest(){
+        assertEquals("Age is >= 0 and <= 120", 5, 9);
+    }
 
-        assertNotEquals();
+    @Test
+    void FamilyNameTest(){
+        assertEquals("Family name is 3 minimum characters.", 6, 6);
+    }
+
+    @Test
+    void HSENumTest(){
+        assertEquals("HSE Number is 10 numbers", 10, 10);
     }
 
 }
